@@ -1,5 +1,5 @@
 ---
-- name: Configure Terraform version
+#- name: Configure Terraform version
 
 # commands
 # tfenv install {version}
