@@ -1,6 +1,7 @@
 ---
 - name: Get the path to ZSH
   become: false
+  changed_when: false
   command: which zsh
   register: zsh_path
 
@@ -11,6 +12,7 @@
   become: true
 
 - name: Install Oh My ZSH
+  changed_when: false
   command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   args:
     creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
