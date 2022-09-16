@@ -23,5 +23,5 @@
 #     - "Preferences.sublime-settings"
 #     - "WordCount.sublime-settings"
 
-- name: Install vscode extensions
-  loop: "{{ vscode_extensions }}"
+# - name: Install vscode extensions
+#   loop: "{{ vscode_extensions }}"
