@@ -7,11 +7,6 @@
     - "{{ sublime_base_path }}/{{ sublime_config_path }}"
     - "{{ sublime_base_path }}/Installed Packages"
 
-- name: Ensure Sublime Package Control is installed.
-  get_url:
-    url: "https://packagecontrol.io/Package%20Control.sublime-package"
-    dest: "{{ sublime_base_path }}/Installed Packages/Package Control.sublime-package"
-
 - name: Ensure Sublime Package Control Packages are configured.
   template:
     src: templates/Package_Control.sublime-settings.j2

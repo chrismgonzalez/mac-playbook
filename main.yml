@@ -1,8 +1,16 @@
 ---
-- hosts: all
+- hosts: localhost
+  vars_prompt:
+
+    - name: username
+      prompt: "Enter your Apple ID for App Store installations."
+      private: no
+
+    - name: password
+      prompt: "Enter the password associated with your Apple ID."
 
   vars_files:
-    - default.config.yml
+    - config.yml
 
   pre_tasks:
     - name: Include playbook configuration.
@@ -41,9 +49,9 @@
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
-    - import_tasks: tasks/sublime-text.yml
-      when: configure_sublime
-      tags: ['sublime-text']
+    # - import_tasks: tasks/sublime-text.yml
+    #   when: configure_sublime
+    #   tags: ['sublime-text']
 
     - block:
         - name: Run configured post-provision ansible task files.

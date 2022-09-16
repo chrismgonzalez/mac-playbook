@@ -4,7 +4,8 @@ name: CI
   pull_request:
   push:
     branches:
-      - master
+      - dev
+      - "feature/*"
   schedule:
     - cron: "0 5 * * 4"
 
