@@ -4,49 +4,47 @@ go_version: 1.19
 
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
 dockitems_remove:
-- TV
-- Podcasts
-- Music
-- Photos
-- 'App Store'
-- 'System Preferences'
+  - TV
+  - Podcasts
+  - Music
+  - Photos
+  - "App Store"
+  - "System Preferences"
 dockitems_persist:
- - name: Messages
-   path: "/Applications/Messages.app/"
-   pos: 3  
- - name: "VSCode"
-   path: "/Applications/Sublime Text.app/"
-   pos: 4
- - name: "Alacritty"
-   path: "/Applications/Alacritty.app/"
-   pos: 5
- - name: "Goodnotes"
-   path: "/Applications/GoodNotes.app/"
-   pos: 6
- - name: "Notion"
-   path: "/Applications/Notion.app"
-   pos: 7  
- - name: "Discord"
-   path: "/Applications/Discord.app"
-   pos: 8
- - name: "Notes"
-   path: "/Applications/Notes.app"
-   pos: 9
- - name: "Chrome"
-   path: "/Applications/Google Chrome.app"
-   pos: 10       
-
-
+  - name: Messages
+    path: "/Applications/Messages.app/"
+    pos: 3
+  - name: "VSCode"
+    path: "/Applications/Sublime Text.app/"
+    pos: 4
+  - name: "Alacritty"
+    path: "/Applications/Alacritty.app/"
+    pos: 5
+  - name: "Goodnotes"
+    path: "/Applications/GoodNotes.app/"
+    pos: 6
+  - name: "Notion"
+    path: "/Applications/Notion.app"
+    pos: 7
+  - name: "Discord"
+    path: "/Applications/Discord.app"
+    pos: 8
+  - name: "Notes"
+    path: "/Applications/Notes.app"
+    pos: 9
+  - name: "Chrome"
+    path: "/Applications/Google Chrome.app"
+    pos: 10
 
 configure_sudoers: false
-sudoers_custom_config: ''
+sudoers_custom_config: ""
 # Example:
 # sudoers_custom_config: |
 #   # Allow users in admin group to use sudo with no password.
@@ -130,8 +128,6 @@ homebrew_cask_apps:
   - discord
   - balenaetcher
   - raspberry-pi-imager
-
-
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
