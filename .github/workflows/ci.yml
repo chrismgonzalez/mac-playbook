@@ -68,7 +68,7 @@ jobs:
         run: ansible-playbook main.yml --syntax-check
 
       - name: Test the playbook.
-        run: ansible-playbook -K --tags "homebrew" main.yml
+        run: ansible-playbook main.yml -K --tags "homebrew"
         env:
           ANSIBLE_FORCE_COLOR: '1'
 
