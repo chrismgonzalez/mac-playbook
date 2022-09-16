@@ -1,5 +1,3 @@
 # initiate post-install tasks
-
 # symlink local dotfiles to the git repo so changes can be added to vcs
-
 # source all shells

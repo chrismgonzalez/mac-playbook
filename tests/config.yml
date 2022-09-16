@@ -1,0 +1,18 @@
+---
+go_version: 1.19
+homebrew_installed_packages:
+  - autoconf
+  - bash-completion
+  - gettext
+  - sqlite
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - pv
+  - wget
+  - wrk
+  - go@{{ go_version }}
+
+homebrew_cask_apps:
+  - firefox
+  - licecap

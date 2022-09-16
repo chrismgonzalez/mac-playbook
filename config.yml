@@ -1,0 +1,167 @@
+---
+# set the Go version to download
+go_version: 1.19
+
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: false
+dockitems_remove:
+- TV
+- Podcasts
+- Music
+- Photos
+- 'App Store'
+- 'System Preferences'
+dockitems_persist:
+ - name: Messages
+   path: "/Applications/Messages.app/"
+   pos: 3  
+ - name: "VSCode"
+   path: "/Applications/Sublime Text.app/"
+   pos: 4
+ - name: "Alacritty"
+   path: "/Applications/Alacritty.app/"
+   pos: 5
+ - name: "Goodnotes"
+   path: "/Applications/GoodNotes.app/"
+   pos: 6
+ - name: "Notion"
+   path: "/Applications/Notion.app"
+   pos: 7  
+ - name: "Discord"
+   path: "/Applications/Discord.app"
+   pos: 8
+ - name: "Notes"
+   path: "/Applications/Notes.app"
+   pos: 9
+ - name: "Chrome"
+   path: "/Applications/Google Chrome.app"
+   pos: 10       
+
+
+
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/chrismgonzalez/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+  - .alacritty.yml
+  - .aliases
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .git-completion.zsh
+  - .gitconfig
+  - .gitmessage
+  - .tmux.conf
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - wget
+  - gnupg
+  - awscli
+  - granted
+  - cfn-lint
+  - tree
+  - ack
+  - jq
+  - mas
+  - autoconf
+  - coreutils
+  - pre-commit
+  - tfenv
+  - terraform-docs
+  - kubectl
+  - minikube
+  - kubernetes-cli
+  - vim
+  - bash-completion
+  - doxygen
+  - gettext
+  - gifsicle
+  - git
+  - github/gh/gh
+  - go@{{ go_version }}
+  - gp
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - openssl
+  - zsh-history-substring-search
+  - pinentry-mac
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - docker
+  - firefox
+  - google-chrome
+  - slack
+  - transmit
+  - visual-studio-code
+  - zoom
+  - alacritty
+  - notion
+  - jetbrains-toolbox
+  - rectangle
+  - discord
+  - balenaetcher
+  - raspberry-pi-imager
+
+
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - { id: 490179405, name: "Okta Verify" }
+  - { id: 1444383602, name: "GoodNotes 5" }
+  - { id: 634148309, name: "Logic Pro" }
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []

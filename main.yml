@@ -4,7 +4,6 @@
 
     - name: username
       prompt: "Enter your Apple ID for App Store installations."
-      private: no
 
     - name: password
       prompt: "Enter the password associated with your Apple ID."
