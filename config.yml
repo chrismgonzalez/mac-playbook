@@ -1,13 +1,13 @@
 ---
 # set the Go version to download
 go_version: 1.19
+terraform_version: 1.2.0
 
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: false
 configure_terminal: false
 configure_osx: false
-configure_vscode: false
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
@@ -26,7 +26,7 @@ dockitems_persist:
     path: "/Applications/Sublime Text.app/"
     pos: 4
   - name: "Alacritty"
-    path: "/Applications/Alacritty.app/"
+    path: "/Applications/Visual Studio Code.app/"
     pos: 5
   - name: "Goodnotes"
     path: "/Applications/GoodNotes.app/"
@@ -130,9 +130,9 @@ homebrew_cask_apps:
   - balenaetcher
   - raspberry-pi-imager
 
-vscode_extensions:
-  - something
-  - something else
+# set to true to configure vscode and extensions
+configure_vscode: false
+vscode_base_path: '/Library/Application Support/Code'
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.

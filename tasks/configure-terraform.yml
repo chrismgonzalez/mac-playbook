@@ -1,6 +1,6 @@
 ---
-#- name: Configure Terraform version
-
-# commands
-# tfenv install {version}
-# tfenv use {version}
+- name: Configure Terraform version with tfenv
+  command: "{{ item }}"
+  with_items: 
+    - tfenv install "{{ terraform_version }}"
+    - tfenv use "{{ terraform_version }}"
