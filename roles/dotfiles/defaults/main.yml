@@ -1,0 +1,22 @@
+---
+dotfiles_repo: "https://github.com/chrismgonzalez/dotfiles.git"
+dotfiles_repo_version: main
+dotfiles_repo_accept_hostkey: false
+dotfiles_repo_local_destination: "~/dotfiles"
+
+dotfiles_home: "~"
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+  - .alacritty.yml
+  - .aliases
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .git-completion.zsh
+  - .gitconfig
+  - .gitmessage
+  - .tmux.conf
