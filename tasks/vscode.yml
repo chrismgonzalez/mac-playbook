@@ -6,5 +6,5 @@
   become: true  
   
 - name: Install vscode extensions
-  command: code --install-extension "{{ item.name | default(item) }}""
+  command: code --install-extension "{{ item.name | default(item) }}"
   loop: "{{ lookup('file', '/files/vscode-extensions.txt').splitlines() }}"

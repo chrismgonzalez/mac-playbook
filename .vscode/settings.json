@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-vars.json": "file:///Users/chris/code/development/devops/ansible/playbooks/mac-playbook/config.yml"
+  }
+}

@@ -18,7 +18,6 @@ formulahendry.terminal
 golang.go
 hbenl.vscode-test-explorer
 henoc.svgeditor
-jpoissonnier.vscode-styled-components
 leveluptutorials.theme-levelup
 mgmcdermott.vscode-language-babel
 ms-azuretools.vscode-docker

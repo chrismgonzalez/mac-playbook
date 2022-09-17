@@ -4,3 +4,5 @@
   with_items: 
     - tfenv install "{{ terraform_version }}"
     - tfenv use "{{ terraform_version }}"
+
+  # todo: verify proper terraform version is installed    
