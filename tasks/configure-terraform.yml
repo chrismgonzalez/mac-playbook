@@ -1,8 +1,7 @@
 ---
 - name: Configure Terraform version with tfenv
   command: "{{ item }}"
+  changed_when: never
   with_items: 
     - tfenv install "{{ terraform_version }}"
-    - tfenv use "{{ terraform_version }}"
-
-  # todo: verify proper terraform version is installed    
+    - tfenv use "{{ terraform_version }}"  

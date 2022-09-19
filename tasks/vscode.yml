@@ -1,5 +1,5 @@
 ---
-- name: check that Visual Studio Code is exists
+- name: Check that Visual Studio Code is exists
   file:
     path: "{{ vscode_base_path }}"
     state: directory
@@ -7,4 +7,5 @@
   
 - name: Install vscode extensions
   command: code --install-extension "{{ item.name | default(item) }}"
-  loop: "{{ lookup('file', '/files/vscode-extensions.txt').splitlines() }}"
+  changed_when: never
+  loop: "{{ lookup('file', './files/vscode-extensions.txt').splitlines() }}"

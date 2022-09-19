@@ -36,3 +36,4 @@ rules:
   
 ignore: |
   .github/stale.yml
+  venv/
